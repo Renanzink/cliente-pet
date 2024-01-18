@@ -13,7 +13,6 @@ import lombok.Value;
 
 @Value
 public class ClienteRequest {
-
 	@NotBlank
 	private String nomeCompleto;
 	@NotBlank
@@ -27,6 +26,7 @@ public class ClienteRequest {
 	private LocalDate dataNascimento;
 	@CPF
 	private String cpf;
+
 	@NotNull
 	private Boolean aceitaTermos;
 }
