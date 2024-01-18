@@ -13,6 +13,7 @@ public class ClienteInfraRepository implements ClienteRepository {
 	@Override
 	public Cliente salva(Cliente cliente) {
 		log.info("[inicia] ClienteRepository -salva");
+		clienteSpringDataJPARepository
 		log.info("[finaliza] ClienteRepository -salva");
 		return cliente;
 	}
