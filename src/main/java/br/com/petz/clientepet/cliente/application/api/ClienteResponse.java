@@ -6,6 +6,5 @@ import lombok.Value;
 
 @Value
 public class ClienteResponse {
-
 	private UUID idCliente;
 }
