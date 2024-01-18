@@ -7,7 +7,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.2.1</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath />
 	</parent>
 	<groupId>br.com.petz</groupId>
 	<artifactId>cliente-pet</artifactId>
@@ -60,7 +60,7 @@
 			<groupId>org.apache.maven</groupId>
 			<artifactId>maven-core</artifactId>
 			<version>4.0.0-alpha-10</version>
-		</dependency> 
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -78,5 +78,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

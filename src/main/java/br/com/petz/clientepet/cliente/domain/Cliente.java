@@ -34,9 +34,7 @@ public class Cliente {
 	private String email;
 	@NotBlank
 	private String celular;
-	@Getter
 	private String telefone;
-	@Getter
 	private Sexo sexo;
 	@NotNull
 	private LocalDate dataNascimento;
@@ -44,12 +42,9 @@ public class Cliente {
 	private String cpf;
 
 	@NotNull
-	@Getter(value = AccessLevel.NONE)
 	private Boolean aceitaTermos;
 
-	@Getter
 	private LocalDateTime dataHoraDoCadastro;
-	@Getter
 	private LocalDateTime dataHoraDaUltimaAlteracao;
 
 	private Cliente(@NotBlank String nomeCompleto, @NotBlank @Email String email, @NotBlank String celular,
