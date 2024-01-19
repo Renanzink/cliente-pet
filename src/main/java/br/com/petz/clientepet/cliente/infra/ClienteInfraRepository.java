@@ -28,6 +28,6 @@ public class ClienteInfraRepository implements ClienteRepository {
 		log.info("[inicia] ClienteInfraRepository - buscaTodosCliente");
 		List<Cliente> todosClientes = clienteSprintDataJPARepository.findAll();
 		log.info("[finaliza] ClienteInfraRepository - buscaTodosCliente");
-		return null;
+		return todosClientes;
 	}
 }
