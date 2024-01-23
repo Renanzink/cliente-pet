@@ -1,6 +1,7 @@
 package br.com.petz.clientepet.handler;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,16 +28,16 @@ public class RestResponseEntityExceptionHandler {
 				.body(ErrorApiResponse.builder().description("INTERNAL SERVER ERROR!")
 						.message("POR FAVOR INFORME AO ADMINISTRADOR DO SISTEMA!").build());
 	}
-	
+
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
 	@ExceptionHandler(MethodArgumentNotValidException.class)
-	public java.util.Map<String, String> handleValidationExceptions(MethodArgumentNotValidException ex){
-		java.util.Map<String, String> errors = new HashMap<>();
+	public Map<String, String> handleValidationExceptions(MethodArgumentNotValidException ex) {
+		Map<String, String> errors = new HashMap<>();
 		ex.getBindingResult().getAllErrors().forEach((error) -> {
-			String fieldName = ((FieldError)error).getField();
+			String fieldName = ((FieldError) error).getField();
 			String errorMessage = error.getDefaultMessage();
 			errors.put(fieldName, errorMessage);
 		});
 		return errors;
-	} 
+	}
 }

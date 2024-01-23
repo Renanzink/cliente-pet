@@ -5,12 +5,10 @@ import java.util.Optional;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.extern.log4j.Log4j2;
 
 @Getter
-@AllArgsConstructor
 @Log4j2
 public class APIException extends RuntimeException {
 	private HttpStatus statusException;
